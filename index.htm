@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Strong password generator - By Jakub Tuzinowski</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="description" content="Advanced strong password generator. Free to use online.">
+	<meta name="keywords" content="strong, password, generator, online, free, secure">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Jakub Tuzinowski - jakub.fun">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sono:wght@200;400&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+<div id="name">Generate your strong password!</div>
+
+	<div class="generated">
+		<input type="text" placeholder="Click the button below to generate password." id="generated-password-box"/>
+	</div>
+
+<div id="wrapper">
+	<div class="button"><input type="button" value="Generate password"  onClick="genPassword()" /></div>
+
+	<div id="container">
+		<div id="title">Settings</div>
+
+		<div class="col-50">
+			<div class="col-80">Character lenght <b>(</b>6-64<b>)</b></div>
+			<div class="col-20">
+			  <select id="password-lenght" class="password-lenght"></select>
+			</div>
+
+			<div class="col-80">Allow lowercase <b>(</b>abc<b>)</b></div>
+			<div class="col-20"><input type="checkbox" checked="true" id="inc-lowercase"></div>
+
+			<div class="col-80">Allow uppercase <b>(</b>ABC<b>)</b></div>
+			<div class="col-20"><input type="checkbox" checked="true" id="inc-upercase"></div>
+
+		</div>
+
+		<div class="col-50">
+			<div class="col-80">Allow numbers <b>(</b>b>0-9<b>)</b></div>
+			<div class="col-20"><input type="checkbox" checked="true" id="inc-numbers"></div>
+			
+			<div class="col-80">Allow symbols <b>(</b>!@#$%^&*()<b>)</b></div>
+			<div class="col-20"><input type="checkbox" checked="true" id="inc-symbols"></div>
+
+			<div class="col-80">Allow Other Symbols <b>(</b>~`[];+?,<b>)</b></div>
+			<div class="col-20"><input type="text" class="otherSymbols" id="inc-other-symbols"></div>
+		</div>
+
+	</div>
+	<div id="info">
+		Use the settings above to specify the length and character parameters desired when generating your random password.
+	</div>
+
+	<div id="author">Project by - <b><a href="https://jakub.fun" target="blank">Jakub Tuzinowski</a></b></div>
+
+</div>
+</body>
+</html>
